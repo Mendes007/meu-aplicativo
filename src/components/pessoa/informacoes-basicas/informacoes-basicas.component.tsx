@@ -1,4 +1,5 @@
 import { FunctionComponent } from "react";
+import { useStyles } from "./informacoes-basicas.style";
 
 export interface IInformacoesBasicasProps {
     nome: string;
@@ -10,22 +11,24 @@ export interface IInformacoesBasicasProps {
 
 const InformacoesBasicas: FunctionComponent<IInformacoesBasicasProps> = (props: IInformacoesBasicasProps) => {
 
+    const styles = useStyles();
+
     const nome = props.nome;
     const altura = props.altura;
     const idade = props.idade;
     const hobby = props.hobby;
 
     return(
-        <div className="informacoes-basicas">
-            <h3>Informações básicas</h3>
+        <div className={styles.root}>
+            <h3 className={styles.titulo}>Informações básicas</h3>
 
-            <p>Nome: {nome}</p>
+            <p className={styles.informacao}>Nome: {nome}</p>
             
-            <p>Altura: {altura}cm</p>
+            <p className={styles.informacao}>Altura: {altura}cm</p>
 
-            <p>Idade: {idade} anos</p>
+            <p className={styles.informacao}>Idade: {idade} anos</p>
 
-            <p>Hobby: {hobby}</p>
+            <p className={styles.informacao}>Hobby: {hobby}</p>
         </div>
     );
 };
