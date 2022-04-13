@@ -14,6 +14,7 @@ const InformacoesVidaAcademica: FunctionComponent <IVidaAcademica> = (props: IVi
 
     return (
         <div>
+            <h3> Vida Academica </h3>
             <p>curso: {curso} </p>
             <p> materias: {materias} </p>
             <p> notaSemestreAtual: {notaSemestreAtual} </p>

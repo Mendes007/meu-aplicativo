@@ -8,7 +8,6 @@ export interface IInformacoesBasicasProps {
     hobby: string;
 }
 
-
 const InformacoesBasicas: FunctionComponent<IInformacoesBasicasProps> = (props: IInformacoesBasicasProps) => {
 
     const styles = useStyles();

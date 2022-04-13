@@ -1,5 +1,7 @@
+import { style } from "@mui/system";
 import exp from "constants";
 import {FunctionComponent} from "react";
+import { useStyles } from "./informacoes-trabalho.style";
 
 export interface IInformacoesTrabalho{
     cargo: string;
@@ -11,6 +13,7 @@ export interface IInformacoesTrabalho{
 
 const InformacoesTrabalho: FunctionComponent <IInformacoesTrabalho> = (props: IInformacoesTrabalho) => {
     
+     const style = useStyles();
     const cargo = props.cargo;
     const anosDeEmpresa = props.anosDeEmpresa;
     const cargoHoraria = props.cargoHoraria;
@@ -18,15 +21,14 @@ const InformacoesTrabalho: FunctionComponent <IInformacoesTrabalho> = (props: II
     const turno = props.turno
 
     return(
-        <div>
-            <h3> Trabalho</h3>
-            <p>cargo: {cargo} </p>
-            <p> anosDeEmpresa: { anosDeEmpresa} </p>
-            <p> cargoHoraria: {cargoHoraria} </p>
-            <p> salario: { salario} </p>
-            <p> turno: { turno} </p>
+        <div className={style.root}>
+            <h3 className={style.titulo} > Trabalho</h3>
+            <p className={style.informacao} > cargo: {cargo} </p>
+            <p className={style.informacao} > anosDeEmpresa: { anosDeEmpresa} </p>
+            <p className={style.informacao} > cargoHoraria: {cargoHoraria} </p>
+            <p className={style.informacao} > salario: { salario} </p>
+            <p className={style.informacao} > turno: { turno} </p>
         </div>
     );
-    
 }
 export default InformacoesTrabalho;
