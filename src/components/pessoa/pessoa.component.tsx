@@ -3,6 +3,7 @@ import InformacoesBasicas, { IInformacoesBasicasProps } from "./informacoes-basi
 import InformacoesFamilia, {IInformacoesFamilia} from "./informacoes-familia/informacoes-familia.component";
 import InformacoesTrabalho, { IInformacoesTrabalho } from "./informacoes-trabalho/informacoes-trabalho.component";
 import InformacoesVidaAcademica, { IVidaAcademica } from "./informacoes-vida-academica/informacoes-vida-academica.component";
+import InformacoesFinancas, {IInformacoesFinancasProps} from "./informacoes-financas/informacoes-financas.component";
 
 
 export interface IPessoaProps {
@@ -10,7 +11,7 @@ export interface IPessoaProps {
     familia: IInformacoesFamilia;
     trabalho: IInformacoesTrabalho;
     vidaAcademica: IVidaAcademica;
- 
+    finacas: IInformacoesFinancasProps;
 }
 
 const Pessoa: FunctionComponent<IPessoaProps> = (props: IPessoaProps) => {
@@ -21,6 +22,7 @@ const Pessoa: FunctionComponent<IPessoaProps> = (props: IPessoaProps) => {
     const familia = props.familia;
     const trabalho = props.trabalho;
     const vidaAcademica = props.vidaAcademica
+    const financas = props.finacas
     
     setInterval(() => {
         setData(new Date());
@@ -32,6 +34,8 @@ const Pessoa: FunctionComponent<IPessoaProps> = (props: IPessoaProps) => {
             <div>
                 { `${data.getHours()}:${data.getMinutes()}:${data.getSeconds()}` }
             </div>
+            <InformacoesFinancas salario={financas.salario} bancos={financas.bancos} capitalInvestido={financas.capitalInvestido} 
+            totalDividas={financas.totalDividas} />
 
             <InformacoesBasicas nome={dadosBasicos.nome} idade={dadosBasicos.idade} 
             altura={dadosBasicos.altura} hobby={dadosBasicos.hobby} />

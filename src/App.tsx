@@ -8,6 +8,7 @@ import { IInformacoesFamilia } from './components/pessoa/informacoes-familia/inf
 import informacoesTrabalho, { IInformacoesTrabalho } from './components/pessoa/informacoes-trabalho/informacoes-trabalho.component';
 import { IVidaAcademica } from './components/pessoa/informacoes-vida-academica/informacoes-vida-academica.component';
 import Pessoa from './components/pessoa/pessoa.component';
+import {IInformacoesFinancasProps} from "./components/pessoa/informacoes-financas/informacoes-financas.component";
 
 interface IAppProps { }
 
@@ -15,12 +16,18 @@ interface IAppProps { }
 //     avatarUrl: MinhaImagem,
 //     name: "Artur",
 // }; 
+let minhasFinancas: IInformacoesFinancasProps = {
+    salario: 3900.00,
+    bancos: ['Itaú',' Bradesco',' Caixa Econômica'],
+    totalDividas: 200,
+    capitalInvestido: 80000.00,
+}
 
 let meuTrabalho: IInformacoesTrabalho = {
     turno: "noturno",
     cargo: "Gerente",
     cargoHoraria: 8,
-    salario: 3.900,
+    salario: 3900.00,
     anosDeEmpresa: 4,
 
 }
@@ -50,7 +57,7 @@ function App(props: IAppProps) {
 
     return (
         <div className="App">
-            <Pessoa dadosBasicos={meusDadosBasicos} familia={familia} trabalho={meuTrabalho}  vidaAcademica={minhaVidaAcademica} />
+            <Pessoa dadosBasicos={meusDadosBasicos} familia={familia} trabalho={meuTrabalho}  vidaAcademica={minhaVidaAcademica} finacas={minhasFinancas} />
 
             {/* <Header/>
             <Comment author={author} text={"Bem vindo!"} date={new Date()} />
