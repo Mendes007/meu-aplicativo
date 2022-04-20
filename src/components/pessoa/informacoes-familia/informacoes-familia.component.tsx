@@ -2,14 +2,14 @@
 import { useStyles } from "./informacoes-familia.style";
 
 
- export interface IInformacoesFamilia{
-     pai: string;
-     mae: string;
-     filhos: string[];
-     conjuje: string;
+ export interface IInformacoesFamiliaProps{
+    pai: string;
+    mae: string;
+    filhos: string[];
+    conjuje: string;
  }
 
- const InformacoesFamilia: FunctionComponent <IInformacoesFamilia> = (props: IInformacoesFamilia) =>{
+ const InformacoesFamilia: FunctionComponent <IInformacoesFamiliaProps> = (props: IInformacoesFamiliaProps) =>{
 
     const style = useStyles();
     const pai = props.pai;

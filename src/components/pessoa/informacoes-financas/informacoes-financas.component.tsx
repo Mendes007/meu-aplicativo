@@ -21,7 +21,7 @@ const InformacoesFinancas: FunctionComponent <IInformacoesFinancasProps> = (prop
     return(
         <div className={style.root}>
             <h3 className={style.titulo}>Informações Finanças</h3>
-            <p className={style.informacao}>totalDividas: {totalDidas} </p>
+            <p className={style.informacao}>Total dívidas: {totalDidas} </p>
             <p className={style.informacao}>bancos: {bancos} </p>
             <p className={style.informacao}>salario: {salario} </p>
             <p className={style.informacao}>capitalInvestido: {capitalInvestido} </p>

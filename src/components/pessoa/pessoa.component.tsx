@@ -1,6 +1,6 @@
 import { FunctionComponent, useState } from "react";
 import InformacoesBasicas, { IInformacoesBasicasProps } from "./informacoes-basicas/informacoes-basicas.component";
-import InformacoesFamilia, {IInformacoesFamilia} from "./informacoes-familia/informacoes-familia.component";
+import InformacoesFamilia, {IInformacoesFamiliaProps} from "./informacoes-familia/informacoes-familia.component";
 import InformacoesTrabalho, { IInformacoesTrabalho } from "./informacoes-trabalho/informacoes-trabalho.component";
 import InformacoesVidaAcademica, { IVidaAcademica } from "./informacoes-vida-academica/informacoes-vida-academica.component";
 import InformacoesFinancas, {IInformacoesFinancasProps} from "./informacoes-financas/informacoes-financas.component";
@@ -8,7 +8,7 @@ import InformacoesFinancas, {IInformacoesFinancasProps} from "./informacoes-fina
 
 export interface IPessoaProps {
     dadosBasicos: IInformacoesBasicasProps;
-    familia: IInformacoesFamilia;
+    familia: IInformacoesFamiliaProps;
     trabalho: IInformacoesTrabalho;
     vidaAcademica: IVidaAcademica;
     finacas: IInformacoesFinancasProps;
