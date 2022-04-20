@@ -16,8 +16,6 @@ export const useStyles = makeStyles(
             margin: '9px',
             display: "aline-block",
             borderRadius: "10px",
-
         },
-
     }
 )
